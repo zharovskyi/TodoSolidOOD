@@ -1,7 +1,7 @@
-import React from 'react';
-import styles from './Task.module.css';
-import PriorityOptions from '../../utils/Priority';
-import PrioritySelector from '../PrioritySelector/PrioritySlector';
+import React from "react";
+import styles from "./Task.module.css";
+import PriorityOptions from "../../utils/Priority";
+import PrioritySelector from "../PrioritySelector/PrioritySlector";
 
 const Task = ({
   id,
@@ -27,7 +27,7 @@ const Task = ({
       <PrioritySelector
         value={priority}
         options={Object.values(PriorityOptions)}
-        onChange={e => onUpdatePriority(id, e.target.value)}
+        onChange={(e) => onUpdatePriority(id, e.target.value)}
       />
 
       <label>
