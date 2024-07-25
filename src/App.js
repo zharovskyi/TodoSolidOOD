@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-// import shortid from 'shortid';
 import TaskEditor from './componenets/TaskEditor/TaskEditor';
 import TaskFilter from './componenets/TaskFilter/TaskFilter';
 import TaskList from './componenets/TaskList/TaskList';
@@ -23,9 +22,11 @@ class App extends Component {
     tasks: [],
     filter: '',
   };
+  
   changeFilter = e => {
     this.setState({ filter: e.target.value });
   };
+
   addTask = task => {
     const taskToAdd = {
       ...task,

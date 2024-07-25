@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Applying OOD in the To-Do List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Encapsulation:
 
-## Available Scripts
+TaskEditor - encapsulates (bundling of data) the state and behavior related to adding a new task
 
-In the project directory, you can run:
 
-### `npm start`
+Inheritance and Polymorphism:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Although not explicitly used in this code
+Polymorphism can be applied when components share the same interface but have different implementations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Abstraction:
 
-### `npm test`
+TaskEditor abstracts the task creation logic.
+TaskList abstracts the task listing logic.
+TaskFilter abstracts the task filtering logic
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## SOLID
 
-### `npm run build`
+S
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Each component has a single responsibility. For example, TaskEditor is responsible for adding tasks, 
+TaskFilter is responsible for filtering tasks, 
+TaskList is responsible for displaying the list of tasks.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Open/Closed Principle
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The PriorityOptions object is used to manage task priorities, and new priorities can be added without modifying the existing options
 
-### `npm run eject`
+Liskov Substitution Principle (LSP) - 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Interface Segregation Principle (ISP):
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Components should not be forced to depend on interfaces they do not use
+TaskList not depends on priority component
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Dependency Inversion Principle - High-level components should not depend on low-level components; both should depend on abstractions ??????
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
